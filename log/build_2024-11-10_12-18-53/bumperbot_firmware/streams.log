@@ -1,0 +1,34 @@
+[0.012s] Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_firmware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/damian/Documents/bumperbot_ws/src/bumperbot_firmware -DCMAKE_INSTALL_PREFIX=/home/damian/Documents/bumperbot_ws/install/bumperbot_firmware
+[0.052s] -- The C compiler identification is GNU 13.2.0
+[0.092s] -- The CXX compiler identification is GNU 13.2.0
+[0.105s] -- Detecting C compiler ABI info
+[0.175s] -- Detecting C compiler ABI info - done
+[0.182s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.182s] -- Detecting C compile features
+[0.182s] -- Detecting C compile features - done
+[0.190s] -- Detecting CXX compiler ABI info
+[0.271s] -- Detecting CXX compiler ABI info - done
+[0.278s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.278s] -- Detecting CXX compile features
+[0.278s] -- Detecting CXX compile features - done
+[0.283s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.368s] -- Found Python3: /home/damian/miniconda3/bin/python3 (found version "3.12.7") found components: Interpreter 
+[0.463s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.505s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.518s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.533s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.550s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.618s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.621s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.697s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.720s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.739s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.802s] -- Found rclpy: 7.1.2 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.804s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.816s] -- Found hardware_interface: 4.18.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.083s] -- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+[1.083s] -- Checking for module 'libserial'
+[1.097s] --   Found libserial, version 1.0.0
+[1.254s] -- Configuring done (1.2s)
+[1.289s] -- Generating done (0.0s)
+[1.292s] -- Build files have been written to: /home/damian/Documents/bumperbot_ws/build/bumperbot_firmware

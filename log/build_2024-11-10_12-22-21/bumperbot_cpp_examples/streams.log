@@ -1,0 +1,46 @@
+[0.012s] Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_cpp_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/damian/Documents/bumperbot_ws/src/bumperbot_cpp_examples -DCMAKE_INSTALL_PREFIX=/home/damian/Documents/bumperbot_ws/install/bumperbot_cpp_examples
+[0.053s] -- The C compiler identification is GNU 13.2.0
+[0.095s] -- The CXX compiler identification is GNU 13.2.0
+[0.109s] -- Detecting C compiler ABI info
+[0.177s] -- Detecting C compiler ABI info - done
+[0.183s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.183s] -- Detecting C compile features
+[0.183s] -- Detecting C compile features - done
+[0.191s] -- Detecting CXX compiler ABI info
+[0.267s] -- Detecting CXX compiler ABI info - done
+[0.274s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.274s] -- Detecting CXX compile features
+[0.274s] -- Detecting CXX compile features - done
+[0.278s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.355s] -- Found Python3: /home/damian/miniconda3/bin/python3 (found version "3.12.7") found components: Interpreter 
+[0.459s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.500s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.513s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.528s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.544s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.611s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.615s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.689s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.703s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.720s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.782s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.795s] -- Found turtlesim: 1.8.3 (/opt/ros/jazzy/share/turtlesim/cmake)
+[0.850s] [31mCMake Error at CMakeLists.txt:13 (find_package):
+[0.850s]   By not providing "Findbumperbot_msgs.cmake" in CMAKE_MODULE_PATH this
+[0.851s]   project has asked CMake to find a package configuration file provided by
+[0.851s]   "bumperbot_msgs", but CMake did not find one.
+[0.851s] 
+[0.851s]   Could not find a package configuration file provided by "bumperbot_msgs"
+[0.851s]   with any of the following names:
+[0.851s] 
+[0.851s]     bumperbot_msgsConfig.cmake
+[0.851s]     bumperbot_msgs-config.cmake
+[0.851s] 
+[0.851s]   Add the installation prefix of "bumperbot_msgs" to CMAKE_PREFIX_PATH or set
+[0.851s]   "bumperbot_msgs_DIR" to a directory containing one of the above files.  If
+[0.851s]   "bumperbot_msgs" provides a separate development package or SDK, be sure it
+[0.851s]   has been installed.
+[0.851s] 
+[0.852s] [0m
+[0.852s] -- Configuring incomplete, errors occurred!
+[0.857s] Invoked command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_cpp_examples' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/damian/Documents/bumperbot_ws/src/bumperbot_cpp_examples -DCMAKE_INSTALL_PREFIX=/home/damian/Documents/bumperbot_ws/install/bumperbot_cpp_examples
