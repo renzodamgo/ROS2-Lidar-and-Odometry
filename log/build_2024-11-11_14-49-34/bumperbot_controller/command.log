@@ -1,0 +1,1 @@
+Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_controller': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_controller -- -j24 -l24

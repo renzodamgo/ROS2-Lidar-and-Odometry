@@ -1,0 +1,2 @@
+Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_localization -- -j24 -l24
+Invoked command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_localization' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_localization -- -j24 -l24

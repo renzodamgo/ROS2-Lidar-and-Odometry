@@ -1,0 +1,25 @@
+[0.015s] Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_localization -- -j24 -l24
+[0.034s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.177s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.198s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.204s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.212s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.221s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.266s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.267s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.314s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.360s] -- Found rclpy: 7.1.2 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.360s] -- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.403s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.420s] -- Found tf2: 0.36.4 (/opt/ros/jazzy/share/tf2/cmake)
+[0.481s] [31mCMake Error at CMakeLists.txt:33 (install):
+[0.481s]   install TARGETS given target "odometry_motion_model" which does not exist.
+[0.481s] 
+[0.481s] [0m
+[0.481s] [31mCMake Error at CMakeLists.txt:40 (install):
+[0.481s]   install TARGETS given target "odometry_motion_model" which does not exist.
+[0.481s] 
+[0.481s] [0m
+[0.546s] -- Configuring incomplete, errors occurred!
+[0.552s] gmake: *** [Makefile:336: cmake_check_build_system] Error 1
+[0.635s] Invoked command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_localization' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_localization -- -j24 -l24

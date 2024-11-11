@@ -1,0 +1,11 @@
+[0.009s] Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_controller': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_controller -- -j24 -l24
+[0.048s] [ 50%] Built target noisy_controller
+[0.049s] [100%] Built target ament_cmake_python_copy_bumperbot_controller
+[0.049s] [100%] Built target simple_controller
+[0.149s] running egg_info
+[0.154s] writing bumperbot_controller.egg-info/PKG-INFO
+[0.155s] writing dependency_links to bumperbot_controller.egg-info/dependency_links.txt
+[0.155s] writing top-level names to bumperbot_controller.egg-info/top_level.txt
+[0.166s] reading manifest file 'bumperbot_controller.egg-info/SOURCES.txt'
+[0.167s] writing manifest file 'bumperbot_controller.egg-info/SOURCES.txt'
+[0.187s] [100%] Built target ament_cmake_python_build_bumperbot_controller_egg
