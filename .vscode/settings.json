@@ -15,5 +15,6 @@
     "/opt/ros/jazzy/lib/python3.12/site-packages",
     "/home/damian/Documents/bumperbot_ws/install/bumperbot_localization/lib/python3.12/site-packages"
   ],
-  "ros.distro": "jazzy"
+  "ros.distro": "jazzy",
+  "cmake.ignoreCMakeListsMissing": true
 }
