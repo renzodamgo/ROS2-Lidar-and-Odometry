@@ -2,39 +2,97 @@
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseArray, Pose
+from tf_transformations import euler_from_quaternion
+from math import sin, cos, atan2, sqrt, fabs, pi
+
+
+def normalize(z):
+    return atan2(sin(z), cos(z))
+
+
+def angle_diff(a, b):
+    a = normalize(a)
+    b = normalize(b)
+    d1 = a - b
+    d2 = 2 * pi - fabs(d1)
+    if d1 > 0:
+        d2 *= -1.0
+    if fabs(d1) < fabs(d2):
+        return d1
+    else:
+        return d2
 
 
 class OdometryMotionModel(Node):
 
     def __init__(self):
         super().__init__("odometry_motion_model")
-        self.odom_sub_ = self.create_subscription(
-            Odometry, "bumperbot_controller/odom_noisy", self.odomCallback, 10
-        )
-        self.odom_pub_ = self.create_publisher(
-            Odometry, "bumperbot_controller/odom_kalman", 10
+        self.is_first_odom = True
+        self.last_odom_x = 0.0
+        self.last_odom_y = 0.0
+        self.last_odom_theta = 0.0
+
+        self.declare_parameter("alpha1", 0.1)
+        self.declare_parameter("alpha2", 0.1)
+        self.declare_parameter("alpha3", 0.1)
+        self.declare_parameter("alpha4", 0.1)
+        self.declare_parameter("nr_samples", 300)
+
+        self.alpha1 = self.get_parameter("alpha1").get_parameter_value().double_value
+        self.alpha2 = self.get_parameter("alpha2").get_parameter_value().double_value
+        self.alpha3 = self.get_parameter("alpha3").get_parameter_value().double_value
+        self.alpha4 = self.get_parameter("alpha3").get_parameter_value().double_value
+        self.nr_samples = (
+            self.get_parameter("nr_samples").get_parameter_value().integer_value
         )
 
-    def odomCallback(self, odom):
-        self.kalman_odom_ = odom
-
-        if self.is_first_odom_:
-            self.last_angular_z_ = odom.twist.twist.angular.z
-            self.is_first_odom_ = False
-            self.mean_ = odom.twist.twist.angular.z
+        if self.nr_samples >= 0:
+            self.samples = PoseArray()
+            self.samples.poses = [Pose() for _ in range(self.nr_samples)]
+        else:
+            self.get_logger().fatal(
+                "Invalid number of samples requested: %d", self.nr_samples
+            )
             return
 
-        self.motion_ = odom.twist.twist.angular.z - self.last_angular_z_
+        self.odom_sub_ = self.create_subscription(
+            Odometry, "bumperbot_controller/odom", self.odomCallback, 10
+        )
+        self.pose_array_ = self.create_publisher(
+            PoseArray, "odometry_motion_model/samples", 10
+        )
 
-        self.statePrediction()
-        self.measurementUpdate()
+    def odomCallback(self, odom: Odometry):
+        q = [
+            odom.pose.pose.orientation.x,
+            odom.pose.pose.orientation.y,
+            odom.pose.pose.orientation.z,
+            odom.pose.pose.orientation.w,
+        ]
 
-        # Update for the next iteration
-        self.last_angular_z_ = odom.twist.twist.angular.z
+        roll, pitch, yaw = euler_from_quaternion(q)
 
-        # Update and publish the filtered odom message
-        self.kalman_odom_.twist.twist.angular.z = self.mean_
-        self.odom_pub_.publish(self.kalman_odom_)
+        if self.is_first_odom:
+            self.last_odom_x = odom.pose.pose.position.x
+            self.last_odom_y = odom.pose.pose.position.y
+            self.last_odom_theta = yaw
+
+            self.samples.header.frame_id = odom.header.frame_id
+            self.is_first_odom = False
+            return
+
+        odom_x_increment = odom.pose.pose.position.x - self.last_odom_x
+        odom_y_increment = odom.pose.pose.position.y - self.last_odom_y
+
+        odom_theta_increment = angle_diff(yaw - self.last_odom_theta)
+
+        if sqrt(pow(odom_y_increment, 2) + pow(odom_x_increment, 2)) < 0.01:
+            delta_rot1 = 0.0
+        else:
+            delta_rot1 = angle_diff(atan2(odom_y_increment, odom_x_increment), yaw)
+        delta_trans = sqrt(pow(odom_y_increment, 2) + pow(odom_x_increment, 2))
+        delta_rot2 = angle_diff(odom_theta_increment, delta_rot1)
 
 
 def main():
