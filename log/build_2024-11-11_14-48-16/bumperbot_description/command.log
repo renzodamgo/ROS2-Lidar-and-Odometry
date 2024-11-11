@@ -1,4 +1,0 @@
-Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_description': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_description -- -j24 -l24
-Invoked command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_description' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/damian/Documents/bumperbot_ws/build/bumperbot_description -- -j24 -l24
-Invoking command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_description': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/damian/Documents/bumperbot_ws/build/bumperbot_description
-Invoked command in '/home/damian/Documents/bumperbot_ws/build/bumperbot_description' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/damian/Documents/bumperbot_ws/build/bumperbot_description

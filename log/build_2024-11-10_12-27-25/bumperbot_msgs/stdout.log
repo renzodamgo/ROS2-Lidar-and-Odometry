@@ -1,9 +1,0 @@
-[  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
-[  2%] Built target ament_cmake_python_copy_bumperbot_msgs
-running egg_info
-writing bumperbot_msgs.egg-info/PKG-INFO
-writing dependency_links to bumperbot_msgs.egg-info/dependency_links.txt
-writing top-level names to bumperbot_msgs.egg-info/top_level.txt
-reading manifest file 'bumperbot_msgs.egg-info/SOURCES.txt'
-writing manifest file 'bumperbot_msgs.egg-info/SOURCES.txt'
-[  2%] Built target ament_cmake_python_build_bumperbot_msgs_egg
